@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package image_search;
+
+option go_package = "C:/Program Files/Go/src";
+
+service ImageSearch {
+    rpc SearchImage (SearchRequest) returns (ImageResponse) {}
+}
+
+message SearchRequest {
+    string keyword = 1;
+}
+
+message ImageResponse {
+    bytes image_data = 1;
+}
